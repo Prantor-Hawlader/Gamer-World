@@ -29,7 +29,7 @@ const useGames = () => {
   useEffect(() => {
     setLoading(true)
     apiClient
-      .get<FecthGamesResponse>("/games", {signal : controller.signal})
+      .get<FecthGamesResponse>('/games', {signal : controller.signal})
       .then((res) => {setGames(res.data.results)
                       setLoading(false)})
       .catch((err) => {
